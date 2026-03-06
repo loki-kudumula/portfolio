@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KUDUMULA LOKESWAR REDDY</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body {
+      min-height:100vh;
+      background:linear-gradient(135deg,#141e30,#243b55);
+      color:white;
+      text-align:center;
+      overflow-x:hidden;
+    }
+
+    header {
+      width:100%;
+      padding:20px 50px;
+      position:fixed;
+      top:0;
+      left:0;
+      display:flex;
+      justify-content:flex-end;
+      background:rgba(0,0,0,0.4);
+      z-index:1000;
+    }
+
+    nav ul {
+      list-style:none;
+      display:flex;
+      gap:25px;
+    }
+
+    nav ul li a {
+      text-decoration:none;
+      color:white;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover {
+      color:#ffdd59;
+    }
+
+    .main-content {
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      padding-top:80px;
+    }
+
+    h1 {
+      font-size:3rem;
+      margin-bottom:20px;
+      letter-spacing:2px;
+    }
+
+    .profile-img {
+      width:180px;
+      height:180px;
+      border-radius:50%;
+      object-fit:cover;
+      border:3px solid white;
+      margin-bottom:20px;
+    }
+
+    .intro {
+      font-size:1.2rem;
+      opacity:0.9;
+      margin-bottom:20px;
+    }
+
+    /* Contact Button */
+    .contact-btn {
+      padding:12px 25px;
+      border:2px solid #ffdd59;
+      border-radius:25px;
+      color:#ffdd59;
+      background:transparent;
+      font-size:1rem;
+      font-weight:500;
+      cursor:pointer;
+      transition:0.3s;
+      margin-bottom:20px;
+    }
+
+    .contact-btn:hover {
+      background:#ffdd59;
+      color:#141e30;
+    }
+
+    /* Contact Details Card */
+    .contact-card {
+      display:none;
+      flex-direction:column;
+      align-items:center;
+      background: rgba(255, 221, 89, 0.1);
+      border:2px solid #ffdd59;
+      border-radius:15px;
+      padding:20px;
+      gap:15px;
+      max-width:350px;
+      margin:auto;
+    }
+
+    .contact-card a {
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 15px;
+      width:90%;
+      border-radius:10px;
+      text-decoration:none;
+      color:#141e30;
+      font-weight:500;
+      transition:0.3s;
+      background:white;
+    }
+
+    .contact-card a:hover {
+      background:#ffdd59;
+      color:#141e30;
+      transform: scale(1.05);
+    }
+
+    .contact-card i {
+      font-size:1.2rem;
+      color:#ffdd59;
+      min-width:20px;
+    }
+
+    section {
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      visibility:hidden;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Header Navbar -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT ME</a></li>
+        <li><a href="education.html">EDUCATION</a></li>
+        <li><a href="experience.html">EXPERIENCE</a></li>
+        <li><a href="skills.html">SKILLS</a></li>
+        <li><a href="research.html">RESEARCH & PUBLICATIONS</a></li>
+        <li><a href="notes.html">NOTES</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <div class="main-content" id="home">
+    <h1>KUDUMULA LOKESWAR REDDY</h1>
+    <img src="loki.jpg" alt="Lokeswar Reddy" class="profile-img">
+    <p class="intro">Welcome to My World!</p>
+
+    <!-- Contact Button -->
+    <button class="contact-btn" onclick="toggleContact()">Contact Me</button>
+
+    <!-- Contact Card -->
+    <div class="contact-card" id="contactCard">
+      <a href="mailto:reddyloki16@gmail.com"><i class="fas fa-envelope"></i>reddyloki16@gmail.com</a>
+      <a href="tel:+916305408204"><i class="fas fa-phone"></i> +91 6305408204</a>
+      <a href="https://www.youtube.com/@lokinathlectures" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+      <a href="https://www.linkedin.com/in/kudumula-lokeswar-reddy-2223a5232/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://www.instagram.com/i_am_lokinath" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    </div>
+    <div class="stylish-name">
+    KUDUMULA LOKESWAR REDDY@2026
+  </div>
+  <p class="tagline">Assistant Professor | AI & ML Enthusiast | Creator of lokinathlectures</p>
+  </div>
+
+
+  <!-- Placeholder Sections -->
+  <section id="about"></section>
+  <section id="education"></section>
+  <section id="experience"></section>
+  <section id="skills"></section>
+  <section id="research"></section>
+
+  <script>
+    function toggleContact() {
+      const card = document.getElementById('contactCard');
+      if(card.style.display === 'flex') {
+        card.style.display = 'none';
+      } else {
+        card.style.display = 'flex';
+      }
+    }
+  </script>
+
+</body>
+</html>

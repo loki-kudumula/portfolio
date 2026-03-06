@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research & Publications - Lokeswar Reddy</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:white;
+  padding-top:100px;
+}
+
+/* Navbar */
+header{
+  padding:20px 50px;
+  display:flex;
+  justify-content:flex-end;
+  background:rgba(0,0,0,0.6);
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index:1000;
+  box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:#00f5d4;
+  text-shadow:0 0 8px #00f5d4;
+}
+
+/* Container */
+.container{
+  width:80%;
+  margin:0 auto;
+}
+
+h1{
+  text-align:center;
+  margin-bottom:50px;
+  font-size:3rem;
+  color:#00f5d4;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+
+/* Year Buttons */
+.year-list{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  margin-bottom:40px;
+  flex-wrap: wrap;
+}
+
+.year-list button{
+  padding:12px 25px;
+  border:none;
+  background:rgba(255,255,255,0.15);
+  color:white;
+  font-size:1.1rem;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+  transition:0.4s;
+  box-shadow:0 4px 8px rgba(0,0,0,0.3);
+}
+
+.year-list button:hover{
+  background:#00f5d4;
+  color:black;
+  transform: translateY(-3px);
+  box-shadow:0 6px 12px rgba(0,0,0,0.5);
+}
+
+/* Content Sections */
+.content-section{
+  background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.1));
+  padding:25px 30px;
+  border-radius:15px;
+  line-height:1.8;
+  display:none; /* Hide by default */
+  transition: all 0.5s ease;
+  margin-bottom:25px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.4);
+}
+
+.content-section strong{
+  color:#ffd166;
+  font-weight:600;
+}
+
+.content-section em{
+  font-style:italic;
+  color:#00f5d4;
+}
+
+.content-section:hover{
+  transform: translateY(-5px);
+  box-shadow:0 15px 30px rgba(0,0,0,0.6);
+}
+
+.content-section::before{
+  content: "\f02d";
+  font-family: "Font Awesome 6 Free";
+  font-weight:900;
+  margin-right:10px;
+  color:#00f5d4;
+}
+
+@media(max-width:768px){
+  header{
+    padding:15px 20px;
+  }
+  .container{
+    width:90%;
+  }
+  h1{
+    font-size:2.2rem;
+  }
+  .year-list button{
+    font-size:1rem;
+    padding:10px 20px;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<ul>
+<li><a href="index.html">HOME</a></li>
+<li><a href="about.html">ABOUT ME</a></li>
+<li><a href="education.html">EDUCATION</a></li>
+<li><a href="experience.html">EXPERIENCE</a></li>
+<li><a href="skills.html">SKILLS</a></li>
+<li><a href="research.html">RESEARCH & PUBLICATIONS</a></li>
+<li><a href="notes.html">NOTES</a></li>
+</ul>
+</nav>
+</header>
+
+<div class="container">
+<h1>Research & Publications</h1>
+
+<!-- Year Buttons -->
+<div class="year-list">
+  <button onclick="showYear('2025')">2025</button>
+  <button onclick="showYear('2024')">2024</button>
+  <button onclick="showYear('Ongoing')">Ongoing Projects</button>
+</div>
+
+<!-- Year 2025 Publications -->
+<div class="content-section" id="2025">
+  <strong>K. Lokeswar Reddy</strong>, co-authored <em>“Improving EFL Students' Reading Skills Using Graph Attention Networks and Intelligence-Based Tasks”</em><br>
+  <strong>Published in:</strong> 2025 3rd International Conference on Integrated Circuits and Communication Systems (ICICACS)<br>
+  <strong>Publisher:</strong> IEEE Xplore<br>
+  <strong>Date:</strong> 21–22 February 2025
+</div>
+
+<!-- Year 2024 Publications -->
+<div class="content-section" id="2024">
+  <strong>K. Lokeswar Reddy</strong>, co-authored <em>“Customer Segmentation in E-Commerce: A Machine Learning and Deep Learning-Enhanced Approach”</em><br>
+  <strong>Published in:</strong> 2024 3rd International Conference on Information, Communication, and Technology (ICICT)<br>
+  <strong>Publisher:</strong> IEEE Xplore<br>
+  <strong>Date:</strong> 13–14 December 2024
+</div>
+
+<!-- Ongoing Projects -->
+<div class="content-section" id="Ongoing">
+  <strong>Ongoing Student Project (Mentorship):</strong><br>
+  Investigating Ethereum Phishing Gangs in Action Using Blockchain Data – Mentoring final-year students
+</div>
+
+<script>
+function showYear(yearId){
+  const sections = document.querySelectorAll('.content-section');
+  sections.forEach(section => {
+    if(section.id === yearId){
+      section.style.display = (section.style.display === 'block') ? 'none' : 'block';
+    } else {
+      section.style.display = 'none';
+    }
+  });
+}
+</script>
+
+</body>
+</html>

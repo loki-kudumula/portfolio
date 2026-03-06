@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills - Lokeswar Reddy</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Lobster&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg,#141e30,#243b55);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px;
+}
+
+/* Navbar */
+header {
+  padding: 15px 50px;
+  display: flex;
+  justify-content: flex-end;
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00d4ff;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg,#00d4ff,#ff5733);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Skills Cards */
+.skills-wrapper {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skill-card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  padding: 30px 20px;
+  border-radius: 20px;
+  width: 270px;
+  min-height: 250px;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg,#00d4ff,#ff5733);
+  transition: 0.5s;
+  z-index: 0;
+}
+
+.skill-card:hover::before {
+  height: 100%;
+}
+
+.skill-card h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  z-index: 1;
+  position: relative;
+}
+
+.skill-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: justify;
+  z-index: 1;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.5s;
+}
+
+.skill-card:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+  .skills-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT ME</a></li>
+      <li><a href="education.html">EDUCATION</a></li>
+      <li><a href="experience.html">EXPERIENCE</a></li>
+      <li><a href="skills.html">SKILLS</a></li>
+      <li><a href="research.html">RESEARCH & PUBLICATIONS</a></li>
+      <li><a href="notes.html">NOTES</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>Skills</h1>
+
+  <div class="skills-wrapper">
+
+    <div class="skill-card">
+      <h3>Core Computer Science</h3>
+      <p>Strong knowledge in DBMS, Data Warehousing & Data Mining, and software development. Proficient in SQL and PL/SQL for database design, querying, and data management. Solid foundation in algorithms and data structures.</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Full Stack Development</h3>
+      <p>Hands-on experience in building responsive web applications using HTML, CSS, JavaScript, and modern frameworks. Skilled in structuring projects, UI/UX design, and deploying complete web solutions.</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Programming & AI</h3>
+      <p>Proficient in Java and OOP concepts. Practical knowledge in Artificial Intelligence domains like Computer Vision and NLP, with implementation experience in academic and real-world projects.</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Leadership & Mentoring</h3>
+      <p>Experienced in guiding student projects, conducting workshops, mentoring, coordinating departmental activities, and supporting placement preparation programs.</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Continuous Learning</h3>
+      <p>Committed to lifelong learning by exploring emerging technologies and industry best practices to stay aligned with professional and academic growth.</p>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

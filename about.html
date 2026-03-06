@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me - KUDUMULA LOKESWAR REDDY</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* Reset and Global Font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+}
+
+/* Body */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Headings */
+h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+/* Navbar */
+header {
+  width: 100%;
+  padding: 20px 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffdd59;
+}
+
+/* Section Layout */
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 120px; /* space for navbar */
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Highlights */
+.highlight {
+  color: #ffdd59;
+  font-weight: 700;
+}
+
+strong {
+  color: #00e6e6;
+  font-weight: 600;
+}
+
+/* Animation for lines */
+.line {
+  display: none;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  animation: fade 1s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Smooth font rendering */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT ME</a></li>
+      <li><a href="education.html">EDUCATION</a></li>
+      <li><a href="experience.html">EXPERIENCE</a></li>
+      <li><a href="skills.html">SKILLS</a></li>
+      <li><a href="research.html">RESEARCH & PUBLICATIONS</a></li>
+      <li><a href="notes.html">NOTES</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- About Section -->
+<section class="about-section">
+  <h1>ABOUT ME</h1>
+
+  <div class="about-container">
+    <div class="line">I am <span class="highlight">Kudumula Lokeswar Reddy</span>, currently working as an <strong>Assistant Professor at KSRM College of Engineering</strong>.</div>
+    <div class="line">My journey reflects <span class="highlight">determination and perseverance</span> with a deep commitment to <strong>education and personal growth</strong>.</div>
+    <div class="line">I come from a <span class="highlight">humble farming family</span> where agriculture has been our primary livelihood for generations.</div>
+    <div class="line">Growing up in this environment taught me the importance of <strong>hard work, patience, and responsibility</strong>.</div>
+    <div class="line">I completed my early education in a <span class="highlight">Government Telugu-medium school</span> with limited resources and exposure.</div>
+    <div class="line">During my journey, I worked in different roles including <strong>farming, driving, and delivery services</strong> to support my education.</div>
+    <div class="line">These experiences strengthened my <span class="highlight">discipline, resilience, and work ethic</span>.</div>
+    <div class="line">Later, my interest developed toward <strong>technology, teaching, and knowledge sharing</strong>.</div>
+    <div class="line">I developed knowledge in <span class="highlight">Database Management Systems, Data Warehousing, SQL, PL/SQL, and Full Stack Web Development</span>.</div>
+    <div class="line">Previously, I worked as an <strong>Assistant Professor at Annamacharya University</strong>.</div>
+    <div class="line">I also served as <span class="highlight">NSS Incharge for the AIML Department</span> and <span class="highlight">Placement Incharge for AIML and CSE(AI)</span>.</div>
+    <div class="line">Currently at <strong>KSRM College of Engineering</strong>, I focus on helping students develop <span class="highlight">industry-ready skills and strong technical foundations</span>.</div>
+    <div class="line">I strongly believe that <strong>education can transform lives</strong> regardless of background.</div>
+    <div class="line">My journey from <span class="highlight">agricultural fields to engineering education</span> proves that determination can overcome any obstacle.</div>
+  </div>
+</section>
+
+<!-- Script for line animation -->
+<script>
+const lines = document.querySelectorAll('.line');
+let index = 0;
+
+function showLine() {
+  lines.forEach(line => { line.style.display = 'none'; });
+  lines[index].style.display = 'block';
+  index++;
+  if(index >= lines.length){ index = 0; }
+}
+
+showLine();
+setInterval(showLine, 4000);
+</script>
+
+</body>
+</html>
