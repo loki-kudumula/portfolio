@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,151 +5,152 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Class Notes - Lokeswar Reddy</title>
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Poppins,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
 }
 
 body{
-  min-height:100vh;
-  background: linear-gradient(135deg,#141e30,#243b55);
-  color:white;
+min-height:100vh;
+background:linear-gradient(135deg,#141e30,#243b55);
+color:white;
 }
 
 /* Navbar */
+
 header{
-  padding:20px 50px;
-  display:flex;
-  justify-content:flex-end;
-  background:rgba(0,0,0,0.6);
-  position:fixed;
-  width:100%;
-  top:0;
-  z-index:1000;
+padding:20px 50px;
+display:flex;
+justify-content:flex-end;
+background:rgba(0,0,0,0.6);
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
 }
 
 nav ul{
-  list-style:none;
-  display:flex;
-  gap:25px;
+list-style:none;
+display:flex;
+gap:25px;
 }
 
 nav ul li a{
-  text-decoration:none;
-  color:white;
-  transition:0.3s;
+text-decoration:none;
+color:white;
+transition:0.3s;
 }
 
 nav ul li a:hover{
-  color:#00f5d4;
+color:#00f5d4;
 }
 
 /* Container */
+
 .container{
-  width:85%;
-  margin:120px auto;
+width:85%;
+margin:120px auto;
 }
 
 h1{
-  text-align:center;
-  font-size:2.5rem;
-  margin-bottom:50px;
-  color:#00f5d4;
+text-align:center;
+font-size:2.5rem;
+margin-bottom:50px;
+color:#00f5d4;
 }
 
-/* Notes Cards */
+/* Notes Grid */
+
 .notes-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
+
+/* Cards */
 
 .note-card{
-  padding:20px;
-  border-radius:15px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.4);
-  transition:0.3s;
-  cursor:pointer;
-  position:relative;
-  overflow:hidden;
+padding:20px;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,0.4);
+transition:0.3s;
+cursor:pointer;
+}
+
+.note-card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px #00f5d4;
 }
 
 /* Subject Colors */
-.spm { background: rgba(255, 99, 132, 0.15); border-left:5px solid #ff6384;}
-.dbms { background: rgba(54, 162, 235, 0.15); border-left:5px solid #36a2eb;}
-.ai { background: rgba(255, 206, 86, 0.15); border-left:5px solid #ffce56;}
-.ml { background: rgba(75, 192, 192, 0.15); border-left:5px solid #4bc0c0;}
 
-/* Hover Glow / Blink Animation */
-.note-card:hover{
-  transform: translateY(-5px);
-  animation: glow 1s infinite alternate;
-}
-@keyframes glow{
-  0% { box-shadow: 0 0 10px #00f5d4; }
-  100% { box-shadow: 0 0 25px #00f5d4; }
-}
+.spm{background:rgba(255,99,132,0.15);border-left:5px solid #ff6384;}
+.dbms{background:rgba(54,162,235,0.15);border-left:5px solid #36a2eb;}
+.ai{background:rgba(255,206,86,0.15);border-left:5px solid #ffce56;}
+.ml{background:rgba(75,192,192,0.15);border-left:5px solid #4bc0c0;}
 
 .note-card h3{
-  margin-bottom:15px;
-  font-weight:600;
-  color:#ffd166;
+margin-bottom:15px;
+color:#ffd166;
 }
 
 .note-card p{
-  font-size:14px;
-  margin-bottom:10px;
-  line-height:1.6;
-  font-weight:400;
+font-size:14px;
+margin-bottom:10px;
 }
 
-/* Collapsible / Units */
+/* Units */
+
 .units{
-  display:none;
-  margin-top:15px;
-  padding-left:15px;
-  transition:0.3s;
+display:none;
+margin-top:15px;
+padding-left:15px;
+animation:fade 0.3s ease;
 }
+
+@keyframes fade{
+from{opacity:0;transform:translateY(-10px);}
+to{opacity:1;transform:translateY(0);}
+}
+
 .units a{
-  display:block;
-  padding:8px 12px;
-  margin-bottom:8px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:600;
-  transition:0.3s;
-}
-.units a:hover{
-  background:#02c7ac;
-  color:white;
+display:block;
+padding:8px 12px;
+margin-bottom:8px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
 }
 
-/* Subject-specific links */
-.spm a{ background:#ff6384; color:black;}
-.spm a:hover{ background:#ff3a5c; color:white;}
+/* Button Colors */
 
-.dbms a{ background:#36a2eb; color:black;}
-.dbms a:hover{ background:#1580d3; color:white;}
+.spm a{background:#ff6384;color:black;}
+.spm a:hover{background:#ff3a5c;color:white;}
 
-.ai a{ background:#ffce56; color:black;}
-.ai a:hover{ background:#f7b600; color:white;}
+.dbms a{background:#36a2eb;color:black;}
+.dbms a:hover{background:#1580d3;color:white;}
 
-.ml a{ background:#4bc0c0; color:black;}
-.ml a:hover{ background:#329b9b; color:white;}
+.ai a{background:#ffce56;color:black;}
+.ai a:hover{background:#f7b600;color:white;}
 
-/* Responsive */
+.ml a{background:#4bc0c0;color:black;}
+.ml a:hover{background:#329b9b;color:white;}
+
 @media(max-width:768px){
-  header{ padding:15px 20px; }
-  .container{ width:90%; }
+header{padding:15px 20px;}
+.container{width:90%;}
 }
+
 </style>
 </head>
+
 <body>
 
 <header>
@@ -168,70 +168,106 @@ h1{
 </header>
 
 <div class="container">
+
 <h1>Class Notes & Study Materials</h1>
 
 <div class="notes-grid">
 
-<!-- SPM Subject -->
+<!-- SPM -->
+
 <div class="note-card spm" onclick="toggleUnits('spm-units')">
 <h3>Software Project Management (SPM)</h3>
 <p>Click to view all available units and materials.</p>
 
 <div class="units" id="spm-units">
-<a href="https://drive.google.com/uc?export=download&id=YOUR_UNIT1_FILE_ID" target="_blank">Unit I - Introduction to SPM</a>
-<a href="https://drive.google.com/uc?export=download&id=1xQSSVZbKbPLbIZuCX61TutaYv9oiON7d" target="_blank">Unit II - Project Planning & Management</a>
-<a href="https://drive.google.com/uc?export=download&id=YOUR_UNIT3_FILE_ID" target="_blank">Unit III - Project Monitoring & Control</a>
-<a href="https://drive.google.com/uc?export=download&id=YOUR_UNIT4_FILE_ID" target="_blank">Unit IV - Risk Management</a>
+<a href="#">Unit I - Introduction</a>
+<a href="#">Unit II - Project Planning</a>
+<a href="#">Unit III - Monitoring</a>
+<a href="#">Unit IV - Risk Management</a>
 </div>
 
 </div>
 
-<!-- FSD Subject -->
+
+<!-- Full Stack -->
+
 <div class="note-card dbms" onclick="toggleUnits('fsd-units')">
-<h3>Full Stack Development-I</h3>
-<p>Click to view all available Experiments.</p>
+<h3>Full Stack Development - I</h3>
+<p>Click to view all available experiments.</p>
 
 <div class="units" id="fsd-units">
-<a href="https://drive.google.com/file/d/1rlmE9t2dExu_LhbhaGoKCv2AC6h1Aq5D/view?usp=drive_link" target="_blank">Exp-1:Lists, Links and Images </a>
-<a href="https://drive.google.com/file/d/1rspVw0UKAa8wjV6rmJgF1BUfH_27Q66U/view?usp=drive_link" target="_blank">Exp-2:HTML Tables, Forms and Frames</a>
-<a href="https://drive.google.com/file/d/1cOxLqiw4hqxP8VzkahUbVv2FIyDxIEna/view?usp=drive_link" target="_blank">Exp-3:HTML 5 and Cascading Style Sheets, Types of CSS </a>
-<a href="https://drive.google.com/file/d/1YvOjn4Y6Uildsj_MsjZauz6QfhgGSpJp/view?usp=drive_link" target="_blank">Exp-4:Selector forms </a>
-<a href="https://drive.google.com/file/d/16q-KqLIuDAtrmIme48AkQ7L15JXw-n9i/view?usp=drive_link">Exp-5:CSS with Color, Background, Font, Text and CSS Box Model </a>
-<a href="https://docs.google.com/document/d/1TrJEmJ_Hyef8XyQOQV6_QWb22dV06D3v/edit?usp=drive_link&ouid=103064777884038014013&rtpof=true&sd=true" target="_blank">Exp-6: Applying JavaScript - internal and external, I/O, Type Conversion </a>
-</div>
+
+<a href="https://drive.google.com/file/d/1rlmE9t2dExu_LhbhaGoKCv2AC6h1Aq5D/view?usp=drive_link" target="_blank">Exp-1: Lists, Links and Images</a>
+
+<a href="https://drive.google.com/file/d/1rspVw0UKAa8wjV6rmJgF1BUfH_27Q66U/view?usp=drive_link" target="_blank">Exp-2: HTML Tables, Forms and Frames</a>
+
+<a href="https://drive.google.com/file/d/1cOxLqiw4hqxP8VzkahUbVv2FIyDxIEna/view?usp=drive_link" target="_blank">Exp-3: HTML5 and CSS</a>
+
+<a href="https://drive.google.com/file/d/1YvOjn4Y6Uildsj_MsjZauz6QfhgGSpJp/view?usp=drive_link" target="_blank">Exp-4: Selector Forms</a>
+
+<a href="https://drive.google.com/file/d/16q-KqLIuDAtrmIme48AkQ7L15JXw-n9i/view?usp=drive_link" target="_blank">Exp-5: CSS Box Model</a>
+
+<a href="https://docs.google.com/document/d/1TrJEmJ_Hyef8XyQOQV6_QWb22dV06D3v/edit?usp=drive_link" target="_blank">Exp-6: JavaScript Basics</a>
+<a href="https://docs.google.com/document/d/1jPBmE_y3TBkDU3gfpBVaDP9kuBhRstkS/edit?usp=drive_link&ouid=103064777884038014013&rtpof=true&sd=true" target="_blank">Exp7:7.	JavaScript Pre-defined and User-defined Objects </a>
 
 </div>
 
-<!-- AI Subject -->
+</div>
+
+
+<!-- AI -->
+
 <div class="note-card ai" onclick="toggleUnits('ai-units')">
-<h3>Artificial Intelligence (AI)</h3>
-<p>Click to view all available units and materials.</p>
+<h3>Artificial Intelligence</h3>
+<p>Click to view units.</p>
+
 <div class="units" id="ai-units">
-<a href="#">Unit I - Introduction</a>
-<a href="#">Unit II - Search Techniques</a>
-</div>
+<a href="#">Unit 1 - Introduction</a>
+<a href="#">Unit 2 - Search Techniques</a>
 </div>
 
-<!-- ML Subject -->
-<div class="note-card ml" onclick="toggleUnits('ml-units')">
-<h3>Machine Learning (ML)</h3>
-<p>Click to view all available units and materials.</p>
-<div class="units" id="ml-units">
-<a href="#">Unit I - Supervised Learning</a>
-<a href="#">Unit II - Unsupervised Learning</a>
 </div>
+
+
+<!-- ML -->
+
+<div class="note-card ml" onclick="toggleUnits('ml-units')">
+<h3>Machine Learning</h3>
+<p>Click to view units.</p>
+
+<div class="units" id="ml-units">
+<a href="#">Unit 1 - Supervised Learning</a>
+<a href="#">Unit 2 - Unsupervised Learning</a>
+</div>
+
 </div>
 
 </div>
 </div>
 
 <script>
+
 function toggleUnits(id){
-  let section = document.getElementById(id);
-  section.style.display = (section.style.display === "block") ? "none" : "block";
+
+let allUnits=document.querySelectorAll(".units");
+
+allUnits.forEach(function(unit){
+if(unit.id!==id){
+unit.style.display="none";
 }
+});
+
+let current=document.getElementById(id);
+
+if(current.style.display==="block"){
+current.style.display="none";
+}else{
+current.style.display="block";
+}
+
+}
+
 </script>
 
 </body>
 </html>
-```

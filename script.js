@@ -1,9 +1,12 @@
-// For smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener("click", function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth"
-    });
-  });
-});
+function toggleContact(){
+
+const card = document.getElementById("contactCard");
+
+if(card.style.display === "flex"){
+card.style.display = "none";
+}
+else{
+card.style.display = "flex";
+}
+
+}
